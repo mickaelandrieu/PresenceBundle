@@ -1,4 +1,4 @@
-appliFB
+Presence Bundle
 =======
 
-Repo à dispo
+Mickaël Andrieu - 2013
