@@ -1,0 +1,73 @@
+
+
+/* ==========================================================================
+   Mickaël Andrieu Custom Windows 8 mimic style - 2012
+   ========================================================================== */
+
+body {
+	background-color: rgb(29,29,29);
+    color: rgb(255,255,255);
+}
+
+.hero-unit {
+	background-color: #333;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.btn {
+	background-image: none; 
+	background-color: #1BA1E2;
+	color: #fff;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.btn:hover {
+	background-color: rgba(29,29,29,1);
+}
+h3 {
+	color:  #1BA1E2;
+}
+
+.brand {
+	color:  rgba(240,150,9,0.8) !important;
+}
+.brand:hover {
+	color: rgba(240,150,9,1) !important;
+}
+
+@media all and (max-width: 840px) { 
+	.hero-unit h1, header h1 {
+		font-size: 24px;
+	}
+	.hero-unit p, .hero-unit .btn-large {
+		font-size: 14px;
+	}
+}
+
+aside iframe {
+	float: right;
+}
+
+@media all and (min-width: 1000px) {
+	body {
+		padding-top: 60px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+{% extends 'AmPresenceBundle::layout.html.twig' %}
+{% block content %}
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <header class="hero-unit">
+        <h1>Hello, I'm a Front End Developper</h1>
+        <p>I'm also a Symfony2 lover, a CasperJs fan and an enthusiastic asp.NET MVC user.</p>
+        <p><a href="http://www.mickael-andrieu.com" class="btn btn-primary btn-large">See also about me &raquo;</a></p>
+    </header>
+    <div class="alert alert-info span7">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Be carefull!</strong> My website is under construction. But you can <a href="http://www.mickael-andrieu.fr/contact.html">Contact me so easier</a>
+    </div>
+
+    <!-- Example row of columns -->
+    <section id="mainContainer"  class="row-fluid">
+        <section class="span8">
+
+            <h2 class="span12">Recents Works</h2>
+            <article class="span4" rel="author">
+                <h3>SEO Challenge</h3>
+                <p>A scholar project about SEO : check my position in Google by searching "Kokolitolithe"</p>
+                <p><a class="btn btn-primary" href="http://www.seo-power.fr">View Website &raquo;</a></p>
+            </article>
+            <article class="span4" rel="author">
+                <h3>Yoopies</h3>
+                <p>Yoopies is a site linking parents with nannies. I rise on the site under particular developments (configuration and implementation of tests).</p>
+                <p><a class="btn btn-primary" href="http://www.yoopies.fr">View Website &raquo;</a></p>
+            </article>
+            <article class="span4" rel="author">
+                <h3>Airlines Manager 2</h3>
+                <p>Airlines Manager 2 is a free game aircraft management via web browser. Developed using the most advanced web technologies, it does not require installing any plugin. </p>
+                <p><a class="btn btn-primary" href="http://www.airlines-manager.com">View Website &raquo;</a></p>
+            </article>
+            <article class="span4" rel="author">
+                <h3>Datexim</h3>
+                <p>Datexim develops and markets innovative solutions for processing and analyzing digital data of all kinds, especially images, videos and virtual 3D objects.</p>
+                <p><a class="btn btn-primary" href="#">View Website &raquo;</a></p>
+            </article>
+        </section>
+        <aside class="span4">
+            <a class="twitter-timeline" href="https://twitter.com/mickael_andrieu" data-widget-id="296178950709841920">Tweets de @mickael_andrieu</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </aside>
+    </section>
+{% endblock %}
