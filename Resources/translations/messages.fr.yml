@@ -1,21 +1,3 @@
 ## french translations
----
-website.head.title: Micka&euml;l Andrieu : Front End Developper Symfony 2
 
-#aside
-aside.header.title: But du site
-aside.responsive.design: Responsive design
-aside.htmlcss: HTML5 / CSS3
-aside.symfony: Symfony 2.1
-aside.resources.sharing: Partage de ressources
-
-#me
-me.title: A propos
-me.firstP: Développeur web auprès d'une société éditrice de jeu vidéo, mon champ de compétences s'étend de la réalisation de fonctionalités à l'aide du framework Symfony 2 jusqu'à l'optimisation front-end (HTML 5 /CSS3).
-me.secondP: Accessoirement, je contribue également à quelques projets tels que Pluxml, Wordpress (plugins) et dans des forums d'aide informatique (Site du Zéro, Alsacréation).
-  
-#resources
-resources.title: Ressources
-
-#contact
-contact.title: Contact
+website.head.title: Mickaël Andrieu : Front End Developper Symfony 2
