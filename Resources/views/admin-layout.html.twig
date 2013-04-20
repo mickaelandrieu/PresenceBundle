@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}{{ 'website.head.title' | trans | raw }}{% endblock %} </title>
+    <meta name="description" content="Symfony 2 lover, CasperJs fan, enthusiatic asp.net MVC user. Make the web better.">
+    <meta name="viewport" content="width=device-width">
+    {% stylesheets output="styles.css"
+    "@AmPresenceBundle/Resources/public/css/bootstrap.min.css"
+    "@AmPresenceBundle/Resources/public/css/bootstrap-responsive.min.css"
+    "@AmPresenceBundle/Resources/public/css/main.css"
+    %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% set url_access = app.request.get('_route') %}
+<div class="container-fluid">
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="{{ path('home_page') }}">Micka&euml;l Andrieu</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li {% if url_access == 'admin_page' %}class="active"{% endif %}><a href="{{ path('admin_page') }}">Admin Home Page</a></li>
+                        <li {% if url_access == 'admin_works_page' %}class="active"{% endif %}><a href="{{ path('admin_works_page') }}">Works</a></li>
+                        <li><a href="#experiments">Experiments</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </header>
+    <section class="span12">
+
+        {% block content %}{% endblock %}
+        <div style="clear: both;">&nbsp;</div>
+        <hr>
+
+        <footer id="#footer">
+            <div itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">Micka&euml;l Andrieu</span>
+                <!--<img src="janedoe.jpg" itemprop="image" />-->
+
+                <span itemprop="jobTitle">Front End Developper Symfony 2</span>
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">
+                          60bis rue Aubervilliers
+                        </span>
+                    <span itemprop="postalCode">75019</span>,
+                    <span itemprop="addressLocality">Paris</span>,
+                    <span itemprop="addressRegion">France</span>
+
+                </div>
+                <span itemprop="telephone">(+33) 6-87-39-05-15</span><br>
+                <a href="mailto:andrieu.travail@gmail.com" itemprop="email">andrieu.travail@gmail.com</a>
+            </div>
+            <!-- I'm the author, of course -->
+            <a style="display: none;" href="https://plus.google.com/112869341666710791952?rel=author">Mickaël Andrieu</a>
+            <a style="display: none;" href="https://plus.google.com/112869341666710791952?rel=publisher">Mickaël Andrieu</a>
+        </footer>
+    </section> <!-- /container -->
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{% javascripts output="js/main.js"
+"@AmPresenceBundle/Resources/public/js/*"
+%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<ul>
+    {% for work in works %}
+    <li>
+        {% include 'AmPresenceBundle:Work:get.html.twig' with { 'work' : work } %}
+        <a href="{{ path('admin_works_page', { 'id': work.id }) }}">
+            Edit <i class="icon-pencil icon-white" title="Edition"></i>
+        </a>  - ||| -
+
+        <a href="{{ path('admin_delete_work', { 'id': work.id }) }}">
+            Delete <i class="icon-trash icon-white" title="Delete"></i>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

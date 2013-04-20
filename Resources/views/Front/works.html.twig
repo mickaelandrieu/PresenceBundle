@@ -1,0 +1,16 @@
+{% extends 'AmPresenceBundle::layout.html.twig' %}
+{% block content %}
+    <section class="articles">
+        {% for work in works %}
+            <article class="span8">
+                <h3>{{ work.title }}</h3>
+                <h4>{{ work.subtitle }} - <span class="article-time">From: <time datetime="{{ work.dateStart|date("m/d/Y") }}">{{ work.dateStart|date("m/d/Y") }}</time> To: <time datetime="{{ work.dateEnd|date("m/d/Y") }}">{{ work.dateEnd|date("m/d/Y") }}</time></span></h4>
+                <img class="img-polaroid" src="{{ work.picture }}" title="{{ work.title }}" />
+                <hr />
+                <div>
+                    {{ work.resume }}
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

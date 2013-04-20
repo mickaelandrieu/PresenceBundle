@@ -1,0 +1,5 @@
+<form action="{{ path('edit_work', { 'id': work.id }) }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+
+    <input type="submit" class="btn btn-primary"/>
+</form>

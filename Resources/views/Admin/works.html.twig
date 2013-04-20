@@ -1,0 +1,13 @@
+{% extends 'AmPresenceBundle::admin-layout.html.twig' %}
+{% block content %}
+    Welcome in admin :
+    <h3>Work creation form</h3>
+    {% if work is not null %}
+        {% include 'AmPresenceBundle:Work:edit.html.twig' with {'work': work} %}
+    {% else %}
+        {% include 'AmPresenceBundle:Work:new.html.twig' %}
+    {% endif %}
+
+    <h3>Work edition choose</h3>
+    {% include 'AmPresenceBundle:Admin:all.html.twig' with {'works': works } %}
+{% endblock %}

@@ -1,0 +1,5 @@
+<section class="articles">
+    {% for work in works %}
+        {% include 'AmPresenceBundle:Work:get.html.twig' with { 'work' : work } %}
+    {% endfor %}
+</section>
