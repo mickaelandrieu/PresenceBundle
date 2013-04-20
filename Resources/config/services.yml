@@ -1,7 +1,10 @@
 parameters:
-#    am_presence.example.class: Am\PresenceBundle\Example
+    am.work.class: Am\PresenceBundle\Entity\Work
+    am.workManager.class: Am\PresenceBundle\Entity\WorkManager
 
 services:
-#    am_presence.example:
-#        class: %am_presence.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    am.work.manager:
+        class: %am.workManager.class%
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - %am.work.class%
