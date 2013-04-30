@@ -85,6 +85,7 @@ class WorkController extends Controller {
     private function processForm(Work $work)
     {
         $statusCode = is_null($work) ? 201 : 204;
+        $response = new Response();
 
         $form = $this->createForm(new WorkType(), $work);
         $form->bind($this->getRequest());
@@ -92,19 +93,14 @@ class WorkController extends Controller {
         if ($form->isValid()) {
             $this->get('am.work.manager')->save($work);
 
-            $response = new Response();
             $response->setStatusCode($statusCode);
-            $response->headers->set('Location',
-                $this->generateUrl(
-                    'show_work', array('id' => $work->getId()),
-                    true // absolute
-                )
-            );
 
             return $response;
 
         }
-        return View::create($form, 400);
+        $response->setStatusCode(400);
+
+        return $response;
 
     }
 }

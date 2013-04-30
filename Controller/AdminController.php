@@ -10,7 +10,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 
 use JMS\SecurityExtraBundle\Annotation\Secure;
 
-/* should be removed ... */
 use Am\PresenceBundle\Entity\Work;
 use Am\PresenceBundle\Form\WorkType;
 
