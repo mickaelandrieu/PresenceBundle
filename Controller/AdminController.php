@@ -46,7 +46,7 @@ class AdminController extends Controller {
      */
     public function deleteAction(Work $work) {
         $this->get('am.work.manager')->delete($work);
-        return $this->redirect($this->generateUrl('admin_page'));
+        return $this->redirect($this->generateUrl('admin_works_page'));
     }
 
 }
