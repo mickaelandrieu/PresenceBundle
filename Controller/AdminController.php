@@ -37,7 +37,7 @@ class AdminController extends Controller {
         }
         $form = $this->createForm(new WorkType(), $work);
         $works = $this->get('am.work.manager')->findAll();
-        return ['form' => $form->createView(), 'works' => $works];
+        return ['form' => $form->createView(), 'works' => $works, 'work' => $work];
     }
 
     /**
