@@ -2,7 +2,7 @@
 {% block content %}
     Welcome in admin :
     <h3>Work creation form</h3>
-    {% if work is not null %}
+    {% if work.id is not null %}
         {% include 'AmPresenceBundle:Work:edit.html.twig' with {'work': work} %}
     {% else %}
         {% include 'AmPresenceBundle:Work:new.html.twig' %}
